@@ -110,11 +110,11 @@ class RecordViewController: UIViewController {
     
     func mergeSegmentsAndUpload(clips _: [String]) {
             if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            VideoCompositionWriter().mergeAudioVideo(dir, filename: "\(self.filename).mov", clips: self.clips) { succes, outUrl in
+            VideoCompositionWriter().mergeAudioVideo(dir, filename: "\(self.filename).mov", clips: self.clips) { [unowned self] succes, outUrl in
                     if succes {
                         if let outURL = outUrl {
                             UISaveVideoAtPathToSavedPhotosAlbum(outURL.path, nil, nil, nil)
-                            
+                            self.present(self.createAlert(), animated: true, completion: nil)
                         }
                     }
                 }
@@ -122,7 +122,7 @@ class RecordViewController: UIViewController {
         
         self.stopAnimatingRecordButton()
         self.pauseAudio()
-        self.present(createAlert(), animated: true, completion: nil)
+       
         }
     
     func setupLivePreview() {
