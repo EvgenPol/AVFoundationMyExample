@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "FD395117-C91F-4736-8233-0E0D1F62A1DF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E2DDC41-3F92-4F83-B804-2A543F3350A6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AVFoundationMyExample/RecordViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "RecordViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "8E2DDC41-3F92-4F83-B804-2A543F3350A6 - 53a31e10882197ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AVFoundationMyExample.RecordViewController.filename.getter : Swift.String"
+                  moduleName = "AVFoundationMyExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shared/Xcode12/%D0%96%D0%B5%D0%BD%D1%8F/TikTok/AVFoundationMyExample/AVFoundationMyExample/RecordViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "8E2DDC41-3F92-4F83-B804-2A543F3350A6 - a53e31ff33eaafd2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AVFoundationMyExample.RecordViewController.filename.setter : Swift.String"
+                  moduleName = "AVFoundationMyExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shared/Xcode12/%D0%96%D0%B5%D0%BD%D1%8F/TikTok/AVFoundationMyExample/AVFoundationMyExample/RecordViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "8E2DDC41-3F92-4F83-B804-2A543F3350A6 - df416c28ecf96102"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AVFoundationMyExample.RecordViewController.filename.modify : Swift.String"
+                  moduleName = "AVFoundationMyExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shared/Xcode12/%D0%96%D0%B5%D0%BD%D1%8F/TikTok/AVFoundationMyExample/AVFoundationMyExample/RecordViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "8E2DDC41-3F92-4F83-B804-2A543F3350A6 - 5ba952fb7f70680f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AVFoundationMyExample.RecordViewController.filename.modify : Swift.String with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "AVFoundationMyExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shared/Xcode12/%D0%96%D0%B5%D0%BD%D1%8F/TikTok/AVFoundationMyExample/AVFoundationMyExample/RecordViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "8E2DDC41-3F92-4F83-B804-2A543F3350A6 - c3fad1795dd9e9c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AVFoundationMyExample.RecordViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; AVFoundationMyExample.RecordViewController"
+                  moduleName = "AVFoundationMyExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shared/Xcode12/%D0%96%D0%B5%D0%BD%D1%8F/TikTok/AVFoundationMyExample/AVFoundationMyExample/RecordViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "8E2DDC41-3F92-4F83-B804-2A543F3350A6 - acffe0ec68e72e6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AVFoundationMyExample.RecordViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;AVFoundationMyExample.RecordViewController&gt;"
+                  moduleName = "AVFoundationMyExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shared/Xcode12/%D0%96%D0%B5%D0%BD%D1%8F/TikTok/AVFoundationMyExample/AVFoundationMyExample/RecordViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "604">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DE6EE69-84CC-45AB-B6C0-2C64D9808391"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AVFoundationMyExample/VideoCompositionWriter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "mergeAudioVideo(_:filename:clips:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D360FFAF-0C2F-4135-9FE7-A434C67A93DF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AVFoundationMyExample/VideoCompositionWriter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "mergeAudioVideo(_:filename:clips:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B21218E1-C3A7-4F30-BDE7-B0F628AC1882"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AVFoundationMyExample/RecordViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "animateRecordButton()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DEAC479F-AE9D-40E4-A65D-C0863F879DD4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AVFoundationMyExample/VideoCompositionWriter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "mergeAudioVideo(_:filename:clips:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
