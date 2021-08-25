@@ -32,6 +32,7 @@ class RecordViewController: UIViewController {
     var audioPlayer: AVAudioPlayer?
     
     private var animatedRecordButton = false
+    private var isDone = false
     private var rearCameraInput: AVCaptureDeviceInput?
     private var frontCameraInput: AVCaptureDeviceInput?
 
@@ -131,7 +132,7 @@ class RecordViewController: UIViewController {
         if captureState == .capturing {
             captureState = .end
         }
-        self.mergeSegmentsAndUpload(clips: clips)
+        isDone = true
     }
     
     func mergeSegmentsAndUpload(clips _: [String]) {
@@ -265,6 +266,12 @@ extension RecordViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                 }
             }
         case .idle:
+            if isDone {
+                DispatchQueue.main.async { [unowned self] in
+                    self.mergeSegmentsAndUpload(clips: self.clips)
+                }
+            }
+               
             if animatedRecordButton {
                 DispatchQueue.main.async { [weak self] in
                     self?.pauseAudio()
