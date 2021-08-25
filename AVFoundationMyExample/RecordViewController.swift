@@ -32,6 +32,8 @@ class RecordViewController: UIViewController {
     var audioPlayer: AVAudioPlayer?
     
     private var animatedRecordButton = false
+    private var rearCameraInput: AVCaptureDeviceInput?
+    private var frontCameraInput: AVCaptureDeviceInput?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,30 +51,37 @@ class RecordViewController: UIViewController {
         captureSession = AVCaptureSession()
         
         guard let rearCamera = AVCaptureDevice.default(for: .video),
+              let frontCamera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front),
               let audioInput = AVCaptureDevice.default(for: .audio)
+              
         else {
             print("Unable to access capture devices!")
             return
         }
         
         do {
-            let cameraInput = try AVCaptureDeviceInput(device: rearCamera)
+            let rearCameraInput = try AVCaptureDeviceInput(device: rearCamera)
+            let frontCameraInput = try AVCaptureDeviceInput(device: frontCamera)
             let audioInput = try AVCaptureDeviceInput(device: audioInput)
             let output = AVCaptureVideoDataOutput()
             
-            if captureSession.canAddInput(cameraInput), captureSession.canAddInput(audioInput), captureSession.canAddOutput(output) {
-                captureSession.addInput(cameraInput)
+            if captureSession.canAddInput(rearCameraInput), captureSession.canAddInput(audioInput), captureSession.canAddOutput(output), captureSession.canAddInput(frontCameraInput) {
+                
+                captureSession.addInput(rearCameraInput)
                 captureSession.addInput(audioInput)
-                videoDeviceInput = cameraInput
+                videoDeviceInput = rearCameraInput
+                self.rearCameraInput = rearCameraInput
+                self.frontCameraInput = frontCameraInput
                 
                 captureSession.addOutput(output)
                 
                 videoOutput = output
-                print("block 1 s")
                 videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue.init(label: "com.nidhi.tiktok.record"))
                 
                 setupLivePreview()
             }
+           
+            
         } catch {
             print("Error Unable to initialize inputs:  \(error.localizedDescription)")
         }
@@ -99,12 +108,29 @@ class RecordViewController: UIViewController {
     }
     
     @IBAction func tappedFlipCamera(_ sender: UIButton) {
+        guard let rearCameraIn = rearCameraInput,
+              let frontCameraIn = frontCameraInput
+        else { return }
+        
+        if captureSession.inputs.contains(rearCameraIn) {
+            captureSession.removeInput(rearCameraIn)
+            captureSession.addInput(frontCameraIn)
+        } else {
+            captureSession.removeInput(frontCameraIn)
+            captureSession.addInput(rearCameraIn)
+        }
     }
     
     @IBAction func tappedDeleteSegment(_ sender: UIButton) {
+        if clips.count > 0 {
+            clips.removeLast()
+        }
     }
     
     @IBAction func tappedDone(_ sender: UIButton) {
+        if captureState == .capturing {
+            captureState = .end
+        }
         self.mergeSegmentsAndUpload(clips: clips)
     }
     
